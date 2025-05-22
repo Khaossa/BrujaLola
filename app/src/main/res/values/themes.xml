@@ -44,4 +44,16 @@
         <!-- Add other card attributes if necessary -->
     </style>
 
+    <!-- DatePicker Style -->
+    <style name="DatePickerStyle" parent="android:Widget.Material.Light.DatePicker">
+        <item name="android:headerBackground">?attr/colorPrimaryVariant</item>
+        <item name="android:calendarTextColor">?attr/colorOnPrimary</item>
+        <item name="android:dayOfWeekBackground">?attr/colorPrimary</item>
+        <item name="android:dayOfWeekTextAppearance">@style/TextAppearance.App.Body1</item> <!-- Use custom text appearance -->
+        <item name="android:yearListSelectorColor">?attr/colorSecondary</item>
+        <item name="android:datePickerMode">spinner</item>
+        <item name="android:textColorPrimary">?attr/colorOnPrimary</item> <!-- Text color for date numbers -->
+        <item name="android:colorControlNormal">?attr/colorOnPrimary</item> <!-- Color for spinners -->
+    </style>
+
 </resources>

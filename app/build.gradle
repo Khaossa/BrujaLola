@@ -21,6 +21,12 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            // Instructs Android Studio to fill the GEMINI_API_KEY in BuildConfig from local.properties
+            buildConfigField("String", "GEMINI_API_KEY", "\"YOUR_API_KEY_HERE\"")
+        }
+        debug {
+            // Also add for debug builds, useful for development
+            buildConfigField("String", "GEMINI_API_KEY", "\"YOUR_API_KEY_HERE\"")
         }
     }
     compileOptions {
@@ -31,15 +37,20 @@ android {
         jvmTarget = '1.8'
     }
     buildFeatures {
-        viewBinding true // Added for convenience, though not strictly required by the current task.
+        viewBinding true
+        buildConfig true // Ensure this is present
     }
 }
 
 dependencies {
-    implementation 'androidx.core:core-ktx:1.12.0' // Updated
+    implementation 'androidx.core:core-ktx:1.12.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.11.0' // Updated
+    implementation 'com.google.android.material:material:1.11.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // Gemini API Client SDK
+    implementation("com.google.ai.client.generativeai:generativeai:0.2.0") // Or latest available
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'

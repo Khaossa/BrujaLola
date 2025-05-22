@@ -1,5 +1,6 @@
 package com.example.divinationapp
 
+import android.content.Intent // Added for future Intent use
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
@@ -12,7 +13,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var tarotCardView: MaterialCardView
     private lateinit var astrologyCardView: MaterialCardView
     private lateinit var numerologyCardView: MaterialCardView
-    private lateinit var dailyHoroscopeCardView: MaterialCardView
+    private lateinit var horoscopeCardView: MaterialCardView // New
+    private lateinit var dailyWisdomCardView: MaterialCardView // Renamed from dailyHoroscopeCardView
     private lateinit var dailyWisdomTextView: TextView
 
     private val wisdomQuotes = listOf(
@@ -31,7 +33,8 @@ class MainActivity : AppCompatActivity() {
         tarotCardView = findViewById(R.id.tarot_cardview)
         astrologyCardView = findViewById(R.id.astrology_cardview)
         numerologyCardView = findViewById(R.id.numerology_cardview)
-        dailyHoroscopeCardView = findViewById(R.id.daily_horoscope_cardview)
+        horoscopeCardView = findViewById(R.id.horoscope_cardview) // New
+        dailyWisdomCardView = findViewById(R.id.daily_wisdom_cardview) // Renamed ID
         dailyWisdomTextView = findViewById(R.id.daily_wisdom_textview)
 
         // Set click listeners
@@ -44,8 +47,14 @@ class MainActivity : AppCompatActivity() {
         numerologyCardView.setOnClickListener {
             showToast(getString(R.string.numerology) + " clicked!")
         }
-        dailyHoroscopeCardView.setOnClickListener {
-            showToast(getString(R.string.daily_horoscope) + " clicked!")
+        horoscopeCardView.setOnClickListener {
+            val intent = Intent(this, HoroscopeActivity::class.java)
+            startActivity(intent)
+            // Optionally, you can still show a toast or log
+            // showToast(getString(R.string.horoscope_feature_name) + " launching.")
+        }
+        dailyWisdomCardView.setOnClickListener { // Listener for the renamed card
+            showToast(getString(R.string.daily_wisdom_feature_name) + " clicked!")
         }
 
         // Set daily wisdom

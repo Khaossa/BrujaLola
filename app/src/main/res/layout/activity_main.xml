@@ -87,7 +87,25 @@
         </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/daily_horoscope_cardview"
+            android:id="@+id/horoscope_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/light_lavender"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/horoscope_feature_name"
+                android:textColor="@color/deep_purple"
+                android:textSize="18sp"
+                android:padding="16dp"
+                android:gravity="center"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/daily_wisdom_cardview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@color/light_lavender"
@@ -96,7 +114,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/daily_horoscope"
+                android:text="@string/daily_wisdom_feature_name"
                 android:textColor="@color/deep_purple"
                 android:textSize="18sp"
                 android:padding="16dp"

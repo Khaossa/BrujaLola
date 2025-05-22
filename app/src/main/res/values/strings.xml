@@ -4,6 +4,28 @@
     <string name="tarot_reading">Tarot Reading</string>
     <string name="astrology">Astrology</string>
     <string name="numerology">Numerology</string>
-    <string name="daily_horoscope">Daily Horoscope</string>
+    <string name="daily_wisdom_feature_name">Daily Wisdom</string>
+    <string name="horoscope_feature_name">Horoscope</string>
     <string name="daily_wisdom">Your daily wisdom awaits...</string>
+
+    <!-- Horoscope Screen Strings -->
+    <string name="horoscope_prediction_title">Horoscope Prediction</string>
+    <string name="date_prompt_text">Enter your Date of Birth:</string>
+    <string name="get_predictions_button_text">Get Zodiac Sign &amp; Predictions</string>
+    <string name="predict_3h_button_text">3-hour</string>
+    <string name="predict_12h_button_text">12-hour</string>
+    <string name="predict_24h_button_text">24-hour</string>
+    <string name="placeholder_zodiac_sign">Your Zodiac Sign: [Sign]</string>
+    <string name="placeholder_prediction">Your prediction will appear here...</string>
+
+    <!-- HoroscopeActivity.kt specific strings -->
+    <string name="error_api_key_not_configured">API Key not configured. Please add your Gemini API Key to local.properties in your project\'s root directory.</string>
+    <string name="error_initializing_ai_model">Error initializing AI Model: %s</string> <!-- %s for exception message -->
+    <string name="error_determine_zodiac_sign_first">Please determine your zodiac sign first.</string>
+    <string name="error_prediction_feature_disabled_api_key">Prediction features disabled due to API key issue.</string>
+    <string name="text_your_zodiac_sign">Your Zodiac Sign: %s</string> <!-- %s for zodiac sign -->
+    <string name="error_ai_model_not_available">AI Model not available. Check API Key configuration.</string>
+    <string name="error_empty_prediction_received">Received an empty prediction. Please try again later or select a different timeframe.</string>
+    <string name="error_fetching_prediction">Failed to fetch prediction. Please check your internet connection or try again later. (Details: %s)</string> <!-- %s for exception message -->
+
 </resources>
