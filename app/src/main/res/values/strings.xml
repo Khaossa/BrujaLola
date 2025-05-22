@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DivinationApp</string>
+    <string name="app_title">Mystic Insights</string>
+    <string name="tarot_reading">Tarot Reading</string>
+    <string name="astrology">Astrology</string>
+    <string name="numerology">Numerology</string>
+    <string name="daily_horoscope">Daily Horoscope</string>
+    <string name="daily_wisdom">Your daily wisdom awaits...</string>
+</resources>
