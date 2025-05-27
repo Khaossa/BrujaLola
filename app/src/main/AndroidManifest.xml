@@ -28,6 +28,12 @@
             android:name=".HoroscopeActivity"
             android:exported="false" />
             <!-- Set exported to false if it's not a launcher activity and only opened by MainActivity -->
+        <activity
+            android:name=".AstralChartInputActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AstralChartDisplayActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

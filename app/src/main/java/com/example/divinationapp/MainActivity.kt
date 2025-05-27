@@ -13,7 +13,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var tarotCardView: MaterialCardView
     private lateinit var astrologyCardView: MaterialCardView
     private lateinit var numerologyCardView: MaterialCardView
-    private lateinit var horoscopeCardView: MaterialCardView // New
+    private lateinit var horoscopeCardView: MaterialCardView
+    private lateinit var astralChartCardView: MaterialCardView // New
     private lateinit var dailyWisdomCardView: MaterialCardView // Renamed from dailyHoroscopeCardView
     private lateinit var dailyWisdomTextView: TextView
 
@@ -33,7 +34,8 @@ class MainActivity : AppCompatActivity() {
         tarotCardView = findViewById(R.id.tarot_cardview)
         astrologyCardView = findViewById(R.id.astrology_cardview)
         numerologyCardView = findViewById(R.id.numerology_cardview)
-        horoscopeCardView = findViewById(R.id.horoscope_cardview) // New
+        horoscopeCardView = findViewById(R.id.horoscope_cardview)
+        astralChartCardView = findViewById(R.id.astral_chart_cardview) // New
         dailyWisdomCardView = findViewById(R.id.daily_wisdom_cardview) // Renamed ID
         dailyWisdomTextView = findViewById(R.id.daily_wisdom_textview)
 
@@ -52,6 +54,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             // Optionally, you can still show a toast or log
             // showToast(getString(R.string.horoscope_feature_name) + " launching.")
+        }
+        astralChartCardView.setOnClickListener {
+            val intent = Intent(this, AstralChartInputActivity::class.java)
+            startActivity(intent)
+            // showToast(getString(R.string.astral_chart_feature_name) + " launching.") // Optional
         }
         dailyWisdomCardView.setOnClickListener { // Listener for the renamed card
             showToast(getString(R.string.daily_wisdom_feature_name) + " clicked!")

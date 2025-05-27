@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="?android:attr/windowBackground"
+    tools:context=".AstralChartDisplayActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/astral_display_title_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/astral_display_title"
+            android:textSize="30sp"
+            android:fontFamily="serif"
+            android:textColor="?attr/colorOnPrimary"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/birth_data_display_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnPrimary"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toBottomOf="@id/astral_display_title_textview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            tools:text="Your Date of Birth: March 21, 2000"/>
+
+        <TextView
+            android:id="@+id/sun_sign_display_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="?attr/colorSecondary"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toBottomOf="@id/birth_data_display_textview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
+            tools:text="Your Sun Sign: Aries"/>
+
+        <LinearLayout
+            android:id="@+id/interpretation_buttons_linearlayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/sun_sign_display_textview"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp">
+
+            <Button
+                android:id="@+id/simple_interpretation_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/simple_interpretation_button_text"
+                android:backgroundTint="?attr/colorPrimaryVariant"
+                android:textColor="?attr/colorOnPrimary"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/detailed_interpretation_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/detailed_interpretation_button_text"
+                android:backgroundTint="?attr/colorPrimaryVariant"
+                android:textColor="?attr/colorOnPrimary"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/interpretation_progressbar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/interpretation_buttons_linearlayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/interpretation_response_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="100dp"
+            android:padding="8dp"
+            android:background="@drawable/prediction_background"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="16sp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            tools:text="@string/interpretation_loading_text"
+            app:layout_constraintTop_toBottomOf="@id/interpretation_progressbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

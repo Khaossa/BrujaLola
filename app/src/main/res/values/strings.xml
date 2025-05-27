@@ -6,6 +6,7 @@
     <string name="numerology">Numerology</string>
     <string name="daily_wisdom_feature_name">Daily Wisdom</string>
     <string name="horoscope_feature_name">Horoscope</string>
+    <string name="astral_chart_feature_name">Astral Chart</string> <!-- New feature -->
     <string name="daily_wisdom">Your daily wisdom awaits...</string>
 
     <!-- Horoscope Screen Strings -->
@@ -27,5 +28,27 @@
     <string name="error_ai_model_not_available">AI Model not available. Check API Key configuration.</string>
     <string name="error_empty_prediction_received">Received an empty prediction. Please try again later or select a different timeframe.</string>
     <string name="error_fetching_prediction">Failed to fetch prediction. Please check your internet connection or try again later. (Details: %s)</string> <!-- %s for exception message -->
+
+    <!-- Astral Chart Input Screen Strings -->
+    <string name="astral_input_title">Astral Chart Input</string>
+    <string name="astral_date_of_birth_prompt">Date of Birth:</string>
+    <!-- Removed astral_time_of_birth_prompt -->
+    <!-- Removed astral_time_unknown_checkbox_text -->
+    <!-- Removed astral_location_of_birth_prompt -->
+    <string name="astral_get_sun_sign_button_text">Get Sun Sign Interpretation</string>
+    <!-- Removed error_location_empty -->
+
+    <!-- Astral Chart Display Screen Strings -->
+    <string name="astral_display_title">Sun Sign Interpretation</string>
+    <string name="birth_data_display_label">Your Date of Birth: %1$d %2$s %3$d</string> <!-- Day, Month Name, Year -->
+    <string name="sun_sign_display_label">Your Sun Sign: %s</string> <!-- Sun Sign Name -->
+    <string name="simple_interpretation_button_text">Simple Interpretation</string>
+    <string name="detailed_interpretation_button_text">Detailed Interpretation</string>
+    <string name="interpretation_loading_text">Generating your interpretation...</string> <!-- For ProgressBar or initial TextView state -->
+    <string name="prompt_simple_sun_sign_interpretation">Provide a concise (under 40 words) personality summary for the Sun sign %s.</string>
+    <string name="prompt_detailed_sun_sign_interpretation">Provide a detailed personality profile, including strengths, weaknesses, and typical life themes for someone with the Sun sign %s.</string>
+    <string name="error_sun_sign_not_available">Sun sign not available. Cannot fetch interpretation.</string>
+    <string name="error_ai_model_not_ready">AI Model not ready. Please check API Key and configuration.</string>
+    <string name="error_could_not_retrieve_birth_data">Error: Could not retrieve birth data. Please try again.</string>
 
 </resources>
